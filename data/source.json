@@ -1,0 +1,22 @@
+{
+  "customers": [
+    {"id": "C1", "country": "Malaysia"},
+    {"id": "C2", "country": "South Korea"}
+  ],
+  "products": [
+    {"id": "P1", "name": "Model Coupe", "line": "Cars"},
+    {"id": "P2", "name": "Model Sailboat", "line": "Boats"}
+  ],
+  "orders": [
+    {"id": "O1", "customer_id": "C1", "date": "2026-10-01", "status": "completed", "items": [
+      {"product_id": "P1", "quantity": 2, "unit_price_cents": 2500},
+      {"product_id": "P2", "quantity": 1, "unit_price_cents": 4000}
+    ]},
+    {"id": "O2", "customer_id": "C2", "date": "2026-10-02", "status": "completed", "items": [
+      {"product_id": "P1", "quantity": 3, "unit_price_cents": 2500}
+    ]},
+    {"id": "O3", "customer_id": "C1", "date": "2026-10-02", "status": "cancelled", "items": [
+      {"product_id": "P2", "quantity": 2, "unit_price_cents": 4000}
+    ]}
+  ]
+}

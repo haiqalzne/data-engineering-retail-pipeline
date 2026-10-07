@@ -1,0 +1,6 @@
+[project]
+name = "data-engineering-retail-pipeline"
+version = "0.1.0"
+description = "A local retail ETL learning project with a SQLite star schema"
+requires-python = ">=3.12"
+dependencies = []

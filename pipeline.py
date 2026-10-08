@@ -3,6 +3,7 @@
 import argparse
 import json
 import sqlite3
+from contextlib import closing
 from datetime import date
 from pathlib import Path
 
@@ -65,7 +66,7 @@ def run(source_path, database_path):
     customers, products, dates, facts, skipped = transform(source)
     database_path = Path(database_path)
     database_path.parent.mkdir(parents=True, exist_ok=True)
-    with sqlite3.connect(database_path) as connection:
+    with closing(sqlite3.connect(database_path)) as connection:
         connection.execute("PRAGMA foreign_keys = ON")
         connection.executescript("""
             CREATE TABLE IF NOT EXISTS dim_customer (

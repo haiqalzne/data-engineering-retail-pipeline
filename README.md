@@ -22,6 +22,25 @@ python report.py
 python -m unittest discover -s tests -v
 ```
 
+## Course 1 demonstrations
+
+Start with [the learning map](docs/COURSE1.md), [requirements](docs/REQUIREMENTS.md),
+and [architecture decisions](docs/ARCHITECTURE.md).
+
+```bash
+python workflow.py
+python stream.py
+python similarity.py
+python -m unittest discover -s tests -v
+```
+
+The workflow records task dependencies, source lineage, status, and duration in output/.
+The event replay demonstrates ingestion, validation, and persistent deduplication.
+The similarity example uses manually assigned numeric vectors and a popularity fallback,
+not an AI service. See [the incident exercise](docs/INCIDENTS.md) for failure handling.
+GitHub Actions is configured to run tests on future pushes and pull requests; it is
+not a deployment pipeline and has not been run remotely for these local changes.
+
 The generated SQLite file is `output/warehouse.db` and is excluded from Git.
 Each run replaces the project warehouse's contents with the current source snapshot.
 Only point `--database` at a database dedicated to this project, never an unrelated database.
@@ -53,7 +72,8 @@ product line, and calendar context. This row-level meaning is called the **grain
 
 ## Limits
 
-Small batch demonstration only: no scheduling, streaming, refunds, taxes,
-currency conversion, incremental loading, access control, or cloud deployment.
+Local demonstration only: no automatic scheduling, live streaming infrastructure,
+refunds, taxes, currency conversion, incremental batch loading, application access
+control, trained machine-learning model, or cloud deployment.
 The source already contains fixed prices, and revenue is simply quantity times price.
-Future lessons can extend this with orchestration, monitoring, and a cloud architecture.
+Cloud architecture and infrastructure-as-code concepts are documented, not deployed.

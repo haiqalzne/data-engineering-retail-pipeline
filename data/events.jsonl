@@ -1,0 +1,5 @@
+{"event_id":"E1","user_id":"synthetic-user-1","product_id":"P1","action":"view"}
+{"event_id":"E2","user_id":"synthetic-user-1","product_id":"P1","action":"cart"}
+{"event_id":"E2","user_id":"synthetic-user-1","product_id":"P1","action":"cart"}
+{"event_id":"E3","user_id":"synthetic-user-2","product_id":"P2","action":"view"}
+{"event_id":"E4","user_id":"synthetic-user-2","product_id":"P2","action":"unknown"}
